@@ -58,7 +58,6 @@ export const setHomeRoot = () => {
 										},
 										bottomTab : {
 											//iconColor: "#ffffff00",
-											//selectedIconColor: "blue",
 											// selectedIcon: require("../assets/icons/hospital.png"),
 											icon: require("../assets/icons/hospital.png"),
 										},
