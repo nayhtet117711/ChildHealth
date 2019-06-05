@@ -8,7 +8,6 @@ import { setHomeRoot } from '../navigation/navigations'
 class DoctorScreen extends PureComponent { 
     
     componentDidMount () {
-
     }
     
     render() {

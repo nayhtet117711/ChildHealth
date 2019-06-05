@@ -31,9 +31,14 @@ export const setHomeRoot = () => {
 					bottomTabs: {
 						options: {
 							bottomTabs: {
+								visible: true,
 								backgroundColor: "#fefefe",
 								animate: true,
-								drawBehind: true
+								drawBehind: true,
+								titleDisplayMode: "showWhenActive",
+								elevation: 16,
+								tabsAttachMode: "onSwitchToTab",
+								// translucent: false,
 							}
 						},
 						children : [
@@ -43,26 +48,30 @@ export const setHomeRoot = () => {
 										{
 											component: {
 												name: screen.HOSPITAL_SCREEN.pathname,	
+												options: {
+													topBar: {
+														title: {
+															text: screen.HOSPITAL_SCREEN.title,
+															color: "#ccdde5",
+														},
+														background: {
+															color: "#131519"
+														},
+													},
+													bottomTab : {
+														// iconColor: "#aaddee",
+														// selectedIconColor: "#eeddaa",
+														text: screen.HOSPITAL_SCREEN.bottomText,
+														textColor: "grey",
+														selectedTextColor: "#5598cd",											
+														icon: require("../assets/icons/hospital_grey.png"),
+														selectedIcon: require("../assets/icons/hospital.png"),
+													},
+													
+												}
 											},
 										}
 									],
-									options: {
-										topBar: {
-											title: {
-												text: screen.HOSPITAL_SCREEN.title,
-												color: "#ccdde5",
-											},
-											background: {
-												color: "#131519"
-											},
-										},
-										bottomTab : {
-											//iconColor: "#ffffff00",
-											// selectedIcon: require("../assets/icons/hospital.png"),
-											icon: require("../assets/icons/hospital.png"),
-										},
-										
-									}
 								}
 							},
 							{
@@ -82,7 +91,13 @@ export const setHomeRoot = () => {
 														},
 													},
 													bottomTab : {
-														icon: require("../assets/icons/doctor.png"),
+														text: screen.DOCTOR_SCREEN.bottomText,
+														textColor: "grey",
+														selectedTextColor: "#5598cd",
+														icon: require("../assets/icons/doctor_grey.png"),
+														selectedIcon: require("../assets/icons/doctor.png"),	
+														disableIconTint: false,
+														disableSelectedIconTint: false,								
 													}
 												}
 											}
@@ -107,12 +122,16 @@ export const setHomeRoot = () => {
 														},
 													},
 													bottomTab : {
-														icon: require("../assets/icons/search-system.png")
+														text: screen.EXPERT_SYSTEM_SCREEN.bottomText,
+														textColor: "grey",
+														selectedTextColor: "#5598cd",
+														icon: require("../assets/icons/search_system_grey.png"),
+														selectedIcon: require("../assets/icons/search_system.png")
 													},
 												}
 											},
 										}
-									]
+									],
 								}
 							}
 						]
@@ -130,7 +149,7 @@ export const navigateScreen3ToSetting1 = ({componentId}) => {
 			name: screen.SETTING_1,
 			options : {
 				bottomTab : {
-					icon: require("../assets/icons/adjustment.png")
+					icon: require("../assets/icons/hospital.png")
 				},
 				topBar: {
 					title: {
@@ -141,7 +160,7 @@ export const navigateScreen3ToSetting1 = ({componentId}) => {
 						color: "#131519"
 					},
 					backButton: {
-						icon: require("../assets/icons/left-arrow.png"),
+						icon: require("../assets/icons/left_arrow.png"),
 						visible: true,
 						
 					},

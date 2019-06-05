@@ -11,19 +11,23 @@ import HeaderOne from '../app/components/HeaderOne'
 const screen = {
     START_SCREEN : { 
         pathname: "navigation.start_screen",
-        title: "Loading"    
+        title: "Loading",
+        bottomText: "",
     },
     HOSPITAL_SCREEN : {
         pathname: "navigation.hospital_screen",
-        title: "Hospitals"
+        title: "Hospitals",
+        bottomText: "Hospitals",
     },
     DOCTOR_SCREEN : {
         pathname: "navigation.doctor_screen",
-        title: "Doctors"
+        title: "Doctors",
+        bottomText: "Doctors",
     },
     EXPERT_SYSTEM_SCREEN : {
         pathname: "navigation.expert_system_screen",
-        title: "Expert System"
+        title: "Expert System",
+        bottomText: "Computer",
     },
     HEADER_1 : {
         pathname: "navigation.header_1",

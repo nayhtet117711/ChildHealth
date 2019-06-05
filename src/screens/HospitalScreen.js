@@ -2,13 +2,12 @@ import React, { PureComponent} from 'react';
 import {
     View, Text, StyleSheet, Button, StatusBar
 } from 'react-native'
-
+import { Navigation } from "react-native-navigation"
 import { setHomeRoot } from '../navigation/navigations'
 
 class HospitalScreen extends PureComponent { 
-    
-    componentDidMount () {
 
+    componentDidMount () {
     }
     
     render() {
