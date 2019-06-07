@@ -5,7 +5,7 @@ export const setStartRoot = () => {
 	Navigation.setRoot({
 		root: {
 			component: {
-				name: screen.START_SCREEN.pathname
+				name: screen.START_SCREEN.pathname,
 			}
 		}
 	});
@@ -14,7 +14,7 @@ export const setStartRoot = () => {
 export const setHomeRoot = () => {
 	Navigation.setRoot({
 		root: {
-				sideMenu: {
+			sideMenu: {
 				left: {
 					component: {
 						name: screen.SIDE_MENU.pathname, //"navigation.side_menu",
@@ -24,22 +24,29 @@ export const setHomeRoot = () => {
 					}
 				},
 				center: {
-					stack: {
-						options: {},
-						children: [{}]
-					},
+					// stack: {
+					// 	options: {
+					// 		topBar: {
+								
+					// 		}
+					// 	},
+					// 	children: [{}]
+					// },
 					bottomTabs: {
 						options: {
 							bottomTabs: {
 								visible: true,
-								backgroundColor: "#fefefe",
+								backgroundColor: "#fefefef5",
 								animate: true,
 								drawBehind: true,
-								titleDisplayMode: "showWhenActive",
-								elevation: 16,
-								tabsAttachMode: "onSwitchToTab",
+								// titleDisplayMode: "showWhenActive",
+								elevation: 24,
+								// tabsAttachMode: "onSwitchToTab",
 								// translucent: false,
-							}
+							}, 	
+							layout: {
+								backgroundColor: "#dae2e5"
+							}						
 						},
 						children : [
 							{
@@ -47,27 +54,28 @@ export const setHomeRoot = () => {
 									children: [
 										{
 											component: {
-												name: screen.HOSPITAL_SCREEN.pathname,	
+												name: screen.HOSPITAL_SCREEN.pathname,
 												options: {
 													topBar: {
 														title: {
 															text: screen.HOSPITAL_SCREEN.title,
-															color: "#ccdde5",
+															color: "#fffffa",
 														},
 														background: {
-															color: "#131519"
+															color: "#4564a5"
 														},
+														drawBehind: true,
+														hideOnScroll: true,
+														visible: true,
+														animate: true,
 													},
 													bottomTab : {
-														// iconColor: "#aaddee",
-														// selectedIconColor: "#eeddaa",
 														text: screen.HOSPITAL_SCREEN.bottomText,
-														textColor: "grey",
+														textColor: "#adadad",
 														selectedTextColor: "#5598cd",											
-														icon: require("../assets/icons/hospital_grey.png"),
+														icon: require("../assets/icons/hospital.png"),
 														selectedIcon: require("../assets/icons/hospital.png"),
-													},
-													
+													},													
 												}
 											},
 										}
@@ -89,12 +97,13 @@ export const setHomeRoot = () => {
 														background: {
 															color: "#131519"
 														},
+														
 													},
 													bottomTab : {
 														text: screen.DOCTOR_SCREEN.bottomText,
-														textColor: "grey",
+														textColor: "#adadad",
 														selectedTextColor: "#5598cd",
-														icon: require("../assets/icons/doctor_grey.png"),
+														icon: require("../assets/icons/doctor.png"),
 														selectedIcon: require("../assets/icons/doctor.png"),	
 														disableIconTint: false,
 														disableSelectedIconTint: false,								
@@ -123,9 +132,9 @@ export const setHomeRoot = () => {
 													},
 													bottomTab : {
 														text: screen.EXPERT_SYSTEM_SCREEN.bottomText,
-														textColor: "grey",
+														textColor: "#adadad",
 														selectedTextColor: "#5598cd",
-														icon: require("../assets/icons/search_system_grey.png"),
+														icon: require("../assets/icons/search_system.png"),
 														selectedIcon: require("../assets/icons/search_system.png")
 													},
 												}
@@ -139,7 +148,8 @@ export const setHomeRoot = () => {
 				}
 				}
 			},
-		}
+		},
+
 	})
 }
 
@@ -152,6 +162,7 @@ export const navigateScreen3ToSetting1 = ({componentId}) => {
 					icon: require("../assets/icons/hospital.png")
 				},
 				topBar: {
+					visible: false,
 					title: {
 						text: "Setting One",
 						color: "#ccdde5",

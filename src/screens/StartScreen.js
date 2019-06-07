@@ -15,13 +15,7 @@ class StartScreen extends PureComponent {
     render() {
         return(
           <View style={styles.container}>
-            <StatusBar
-                // backgroundColor = "#f5fCFF"
-                // animated={true}
-                hidden={true}
-            />
             <Text style={styles.welcome}>Loading...</Text>
-            {/* <Button title="My Account" onPress={} /> */}
           </View>
         )
     }
@@ -34,7 +28,6 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F5FCFF',
     },
     welcome: {
       fontSize: 20,
